@@ -1,0 +1,29 @@
+﻿body {
+}
+#map {
+    height: 400px;
+    width: 100%;
+}
+#img1 {
+    width: 50px;
+    height: 50px;
+}
+
+#img2 {
+    width: 50px;
+    height: 50px;
+}
+#img0 {
+    width: 200px;
+    height: 200px;
+}
+#resumee {
+    width: 700px;
+    height: 700px;
+}
+header, footer {
+    padding: 1em;
+    color: black;
+    clear: left;
+    text-align: center;
+}
