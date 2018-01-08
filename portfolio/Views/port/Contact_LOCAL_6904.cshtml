@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_solar.cshtml";
+}
+<div id="section5" class="container-fluid">
+    <h2 class="text-center" style="height:100px">Contact Info</h2>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <a href="https://www.facebook.com/sheeva.samm" target="_blank">               
+                    <img src="~/Images/facebookimage.png" id="img1" alt="photo">
+            </a>
+            <a href="https://www.linkedin.com/in/shiva-j-b9ba02141/" target="_blank">
+                    <img src="~/Images/linkedin-image.jpg" id="img2" alt="photo">
+            </a>
+            <p><span class="glyphicon glyphicon-phone"></span>Phone: +1 (330)-689-9750</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>Email: sjaligam@kent.edu</p>
+            <p><span class="glyphicon glyphicon-map-marker" style="height:50px"></span>Kent,OH, US</p>
+            <div id="map"> </div>
+            <script>
+                function initMap() {
+                    var uluru = { lat: 41.1392586, lng: -81.3303171 };
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 4,
+                        center: uluru
+                    });
+                    var marker = new google.maps.Marker({
+                        position: uluru,
+                        map: map
+                    });
+                }
+            </script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgkUadd46Wjke9m1iv2Y-lQS7khtCFXxI&callback=initMap">
+            </script>
+        </div>
+        <div class="col-md-6">
+            <h2>ContactDetails</h2>
+            <form method="post" action="">  
+                    <div class="form-group">
+                        <label for="FirstName">FirstName</label>      
+                            <input type="text" name="Fname" class="form-control" id="InputFname" placeholder="Type Your First Name" required> 
+                    </div>
+                    <div class="form-group">
+                        <label for="LastName">LastName</label>      
+                            <input type="text" name="Lname" class="form-control" id="InputLname" placeholder="Type your Last Name" required>            
+                    </div>
+                    <div class="form-group">
+                        <label for="InputEmail">Email</label>             
+                            <input type="email" name="Email" class="form-control" id="InputEmail" placeholder="Type your Email" required>               
+                    </div>
+                    <div class="form-group">
+                        <label for="InputSubject">Subject</label>                   
+                            <textarea class="form-control" name="Subject" rows="3" id="InputSubject" placeholder="Type Your Message" required> </textarea> <br>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
